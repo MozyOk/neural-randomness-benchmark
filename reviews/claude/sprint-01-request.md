@@ -1,10 +1,9 @@
 # Independent review request for Claude
 
-**Candidate commit:** `e6692c6f13a2a4a58617ae380130c7f455c122ed`
-**Base commit:** `e4e8cf912770a63227751e2a26fb8535935c5772`
+- **Candidate commit** `a6c2803ef85753316304801f2b23461d4ae7e18f`
+- **Base commit** `e4e8cf912770a63227751e2a26fb8535935c5772`
 
-
-Review the candidate commit. The follow-up commit adds this request. Working materials at the candidate:
+Review the candidate commit. The follow-up commit pins this request to the candidate. Working materials at the candidate:
 
 - Research protocol — [docs/research-protocol-v1.md](../../docs/research-protocol-v1.md)
 - Implementation and environment — [benchmark.py](../../benchmark.py), [.python-version](../../.python-version), [requirements.txt](../../requirements.txt) and [CI workflow](../../.github/workflows/benchmarks.yml)
@@ -16,7 +15,7 @@ Review the candidate commit. The follow-up commit adds this request. Working mat
 Use a fresh checkout and CPython 3.12.16.
 
 ```sh
-git checkout --detach e6692c6f13a2a4a58617ae380130c7f455c122ed
+git checkout --detach a6c2803ef85753316304801f2b23461d4ae7e18f
 python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -27,7 +26,7 @@ sh scripts/smoke.sh --output /tmp/sprint-01-review-smoke.json
 
 ## Standalone review prompt
 
-> Act as the independent scientific and code reviewer for MozyOk/neural-randomness-benchmark Sprint 01. Review commit `e6692c6f13a2a4a58617ae380130c7f455c122ed` against base `e4e8cf912770a63227751e2a26fb8535935c5772`. Use the preprint at https://arxiv.org/pdf/1801.01117v1 and the MATLAB repository https://github.com/WANG-AXIS/pseudo-Randomness at `1ea617b5d3a5e7a89928e44926ff415bb448fe4e`. Derive your own account of preprocessing, training, model selection and evaluation before opening the implementer's gap analysis. Compare your account with `docs/original-replication-gap.md` after recording your initial findings.
+> Act as the independent scientific and code reviewer for MozyOk/neural-randomness-benchmark Sprint 01. Review commit `a6c2803ef85753316304801f2b23461d4ae7e18f` against base `e4e8cf912770a63227751e2a26fb8535935c5772`. Use the preprint at https://arxiv.org/pdf/1801.01117v1 and the MATLAB repository https://github.com/WANG-AXIS/pseudo-Randomness at `1ea617b5d3a5e7a89928e44926ff415bb448fe4e`. Derive your own account of preprocessing, training, model selection and evaluation before opening the implementer's gap analysis. Compare your account with `docs/original-replication-gap.md` after recording your initial findings.
 >
 > Audit `docs/research-protocol-v1.md` for well-defined hypotheses and estimands, split integrity, seed and block independence, controls, validity of p-values and intervals, multiplicity, power, stopping and replication criteria. Check the code for offset and window errors, future or held-out information access, metric correctness, baseline comparability and source provenance. Identify what the raw artifacts can substantiate. Attempt to independently reconstruct a metric from the saved raw bits and context scores.
 >
