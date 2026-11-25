@@ -1,7 +1,7 @@
 name: Benchmark tests
 on:
   push:
-    branches: [main]
+    branches: [main, "research/sprint-*"]
   pull_request:
   workflow_dispatch:
 
